@@ -1,5 +1,14 @@
 version: "3"
 services:
+  app:
+    ports:
+      - "443:3000"
+    environment:
+      ...
+      SSL_CERT: filename.crt
+      SSL_CERT_KEY: filename.key
+    volumes:
+      - /var/fider/etc:/app/etc
   smtp:
     image: mailhog/mailhog:latest
     restart: always
