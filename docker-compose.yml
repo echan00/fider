@@ -4,8 +4,6 @@ services:
     ports:
       - "80:80"
       - "443:3000"
-    environment:
-      SSL_AUTO: "true"
   smtp:
     image: mailhog/mailhog:latest
     restart: always
